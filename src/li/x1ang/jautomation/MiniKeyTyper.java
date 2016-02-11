@@ -10,7 +10,7 @@ import java.awt.Robot;
  *
  */
 public class MiniKeyTyper {
-	private final String PREFIX = "f384";
+    private final String PREFIX = "f384";
     private final String SUFFIX = "764663c81d1";
     private final int BREAK_TIME = 4 * 1000; // You need to take a break between each iteration to do something like clicking the "Confirm" button and suppress error messages.    
 
