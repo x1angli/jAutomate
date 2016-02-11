@@ -16,45 +16,45 @@ public class MiniKeyTyper {
 
     private Robot robot;
     
-	public MiniKeyTyper() throws AWTException {
-		robot = new Robot();
-	}
+    public MiniKeyTyper() throws AWTException {
+        robot = new Robot();
+    }
 
-	public void run() {
-		System.out.println("I am running");
-		robot.delay(3000);
-		for (int i=0; i<=9; i++) {
-		    string code_i = PREFIX + i + SUFFIX
-			System.out.println("We are about to type the code:" + code_i);
-			type(code_i);
-			robot.delay(BREAK_TIME);
-		}
-		System.out.println("I am finished running.");
-	}
-	
-	private void type(String s) {
-		byte[] bytes = s.getBytes();
-		for (byte b : bytes) {
-			int code = b;
-			
-			// keycode handles [A-Z] (which is ASCII decimal [65-90])
-			if (code > 96 && code < 123)
-				code = code - 32;
-				
-			robot.delay(40);
-			robot.keyPress(code);
-			robot.keyRelease(code);
-		}
-	}
+    public void run() {
+        System.out.println("I am running");
+        robot.delay(3000);
+        for (int i=0; i<=9; i++) {
+            string code_i = PREFIX + i + SUFFIX
+            System.out.println("We are about to type the code:" + code_i);
+            type(code_i);
+            robot.delay(BREAK_TIME);
+        }
+        System.out.println("I am finished running.");
+    }
+    
+    private void type(String s) {
+        byte[] bytes = s.getBytes();
+        for (byte b : bytes) {
+            int code = b;
+            
+            // keycode handles [A-Z] (which is ASCII decimal [65-90])
+            if (code > 96 && code < 123)
+                code = code - 32;
+                
+            robot.delay(40);
+            robot.keyPress(code);
+            robot.keyRelease(code);
+        }
+    }
 
-	public static void main(String[] args) {
-		MiniKeyTyper main;
-		try {
-			main = new MiniKeyTyper();
-			main.run();
-		} catch (AWTException e) {
-			e.printStackTrace();
-		}
-	}
+    public static void main(String[] args) {
+        MiniKeyTyper main;
+        try {
+            main = new MiniKeyTyper();
+            main.run();
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
