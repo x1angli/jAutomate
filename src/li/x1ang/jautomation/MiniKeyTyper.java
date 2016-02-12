@@ -6,7 +6,12 @@ import java.awt.Robot;
 /**
  * @author x1ang.li
  * 
- * I got a coupon 
+ * This Java Class is used to automatically iterate through all coupon codes within specified range.
+ * One day, I got a coupon code for a merchant. But the paper on which the code is printed was damaged,
+ * thus there was one digit illegible. To solve the problem, I wrote this Java Class. It works like
+ * a brute-force password cracker by trying all possible combinations within the range. Since most
+ * coupon code input box are segmented, it mimics the keyboard actions by automatically put in the
+ * code.
  *
  */
 public class MiniKeyTyper {
