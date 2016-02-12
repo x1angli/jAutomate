@@ -1,4 +1,4 @@
-package li.x1ang.jautomaiton;
+package li.x1ang.jautomation;
 
 import java.awt.AWTException;
 import java.awt.Robot;
