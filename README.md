@@ -1,4 +1,4 @@
-# jAutomate
+# jAutomation
 
 This repo provides a collection of tiny Java code snippets. It solves a bunch of day-to-day problems that might otherwise become boring to human beings by leveraging computer's automation power.
 
